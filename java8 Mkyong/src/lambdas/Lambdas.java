@@ -7,6 +7,7 @@ public class Lambdas {
 		//example 1
 		Test t=()->System.out.println("xyz");
 		t.doOutput();
+		printOutput(()->System.out.println("lets see"));
 		//example 2
 		Test1 t1=(x,y)-> x+y;
 		System.out.println(t1.doOutput(2, 5)); 
@@ -21,6 +22,13 @@ public class Lambdas {
 			}
 		};
 		t2.doOutput();
+		Test.method3();
+		t.methodtest();
+		
+	}
+
+	private static void printOutput(Test t ) {
+		t.doOutput();
 		
 	}
 	
@@ -31,7 +39,16 @@ public class Lambdas {
 }
 @FunctionalInterface
 interface Test{
-	void doOutput();
+	void doOutput();//only one abstract methods and default and static methods are allowed
+	default void methodtest(){
+		System.out.println("Default method");
+	}
+	default void methodtest2(){
+		System.out.println("Default method");
+	}
+	static void method3() {
+	System.out.println("method 3");
+	}
 }
 
 @FunctionalInterface

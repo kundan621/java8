@@ -55,7 +55,7 @@ public class ForEach {
 		list1.forEach(System.out::println);
 		
 		//filter any object
-		List<Person> listPerson=Arrays.asList(new Person("Kundan", 25),new Person("suchi", 23),new Person("Prashant",24));
+		List<Person> listPerson=Arrays.asList(new Person("kundan", 25),new Person("suchi", 23),new Person("Prashant",24));
 		
 		//to filter objects in the stream
 	    listPerson.stream().filter(s->!s.getName().equalsIgnoreCase("prashant")).forEach(System.out::println);
@@ -74,7 +74,15 @@ public class ForEach {
 	    //uppercase
 	    List<String> smallcase=Arrays.asList("a","b","c","d");
 	    smallcase.stream().map(a->a.toUpperCase()).forEach(System.out::println);
-		//smallcase.stream().map(a->a.toUpperCase()).forEach(System.out::println);
+	    
+	    
+
+		//filter any object
+		List<Person> listPerson2=Arrays.asList(new Person(null, 25),new Person("suchi", 23),new Person("Prashant",24));
+		
+	    List<String> listNames= listPerson2.stream().filter(p->p.getName()!=null).map(Person::getName).collect(Collectors.toList());
+	    listNames.forEach(System.out::println);
+		
 	}
 
 }
