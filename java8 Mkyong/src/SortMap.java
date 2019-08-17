@@ -16,8 +16,11 @@ public class SortMap {
 
         Map<Integer,String> sortedMap=new LinkedHashMap<>();
         map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEachOrdered(x->sortedMap.put(x.getKey(),x.getValue()));
-
         sortedMap.forEach((k,v)->System.out.println(k+" "+v ));
+
+
+
+
 
 
     }
