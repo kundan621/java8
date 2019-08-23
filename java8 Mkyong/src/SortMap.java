@@ -3,6 +3,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+//comment only in map
 public class SortMap {
     public static void main(String args[]){
 
