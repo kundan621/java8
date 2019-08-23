@@ -3,7 +3,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Stream to List
+ * Stream to List in local
  */
 public class StreamToList {
 
