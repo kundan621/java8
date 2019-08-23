@@ -4,12 +4,14 @@ import java.util.stream.Collectors;
 
 /*
     Filter Class
-<<<<<<< HEAD
 	//in master one comment
-=======
+
 	
 	local wala
->>>>>>> commit ib local  branch
+commit ib local  branch
+	
+	local wala
+
  */
 public class Filter {
     public static void main(String [] args){
